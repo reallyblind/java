@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //规则：单词字符：6~12
+
+    var reg = /^\w{6,12}$/;
+
+    var str = "abc";
+    var flag = reg.test(str);
+    alert(flag);
+
+
+    //1.验证用户名是否符合规则
+    //1.1 获取用户名的输入框
+    var usernameInput = document.getElementById("username");
+
+    //1.2绑定onblur事件 失去焦点
+    usernameInput.onblur = checkUsername;
+
+    function checkUsername() {
+        //1.3获取用户的用户名
+        var username = usernameInput.value.trim();
+
+        var reg = /^\w{6,12}$/;
+        var flag = reg.test(username);
+
+        //1.4判断是否符合规则：长度6-12
+        // var flag = username.length >= 6 && username.length <= 12;
+        if (flag) {
+            //符合规则
+            document.getElementById("username_err").style.display = 'none';
+
+        } else {
+            //不符合规则
+            document.getElementById("username_err").style.display = '';
+        }
+
+        return flag;
+    }
+
+</script>
+
+</body>
+</html>

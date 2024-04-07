@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //alert
+    window.alert("abc");
+
+    //confirm:点击确定按钮返回true，点击取消按钮返回false
+    var flag = confirm("确认删除?");
+    // alert(flag);
+    if(flag){
+        //删除逻辑
+    }
+
+    //定时器
+    /*
+        setTimeOut(function,毫秒值):在一定时间间隔后执行一个function，只执行一次
+
+        setInterval(function,毫秒值):在一定时间间隔后执行一个function，循环执行
+     */
+
+    setTimeout(function (){
+        alert("heehe");
+    },3000);//3秒后出一次
+
+    setInterval(function (){
+        alert("hehe");
+    },2000);//每隔两秒出一次
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <input type="button" value="一个按钮" v-on:click="show()"><br>
+    <input type="button" value="一个按钮" @click="show()">
+
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+    //1.创建Vue核心对象
+    new Vue({
+        el:"#app",
+        data(){//简单值的形式：JSON的简单值的格式对应着JS中的基础数据类型：数字 字符串 布尔值
+            return{
+                username:"",
+                url:"https://www.baidu.com"
+            }//这里username识别不出来的把下面data后面的()换成:
+        },
+        methods:{
+            show(){
+                alert("我被点了...");
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

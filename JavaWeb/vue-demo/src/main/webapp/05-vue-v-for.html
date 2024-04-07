@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <div v-for="addr in addrs">
+        {{addr}}<br>
+    </div>
+
+    <hr>
+
+    <div v-for="(addr,i) in addrs">
+        {{i+1}}--{{addr}}<br>
+    </div>
+
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+    //1.创建Vue核心对象
+    new Vue({
+        el:"#app",
+        data(){//简单值的形式：JSON的简单值的格式对应着JS中的基础数据类型：数字 字符串 布尔值
+            return{
+                username:"",
+                url:"https://www.baidu.com",
+                count:3,
+                addrs:["北京","上海","西安"]
+            }//这里username识别不出来的把下面data后面的()换成:
+        },
+        methods:{
+            show(){
+                alert("我被点了...");
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>
